@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* https://meyerweb.com/eric/tools/css/reset/ - сброс стилей
+https://necolas.github.io/normalize.css/ - сброс стилей
+https://nicolasgallagher.com/about-normalize-css/ */
+
+/* селекторы по классы. и селектор класса 
+приоритетнее и принцип каскадности что ниже, 
+то приоритетнее*/
+/* h1 {
+  color: blue;
+}
+
+.title {
+  color: blueviolet;
+} */
+
+/* анимация с https://animista.net/ */
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+/* задний фон */
+html {
+  background-color: #ccc;
+}
+
+/* выравнивание документа */
+.title,
+.dsc {
+  text-align: center;
+}
+
+/* центрирование контейнера */
+.container {
+  /* margin: 10px 20px 30px 40px; */
+  /* margin: 20px 40px; */
+  margin: 0 auto;
+  /* width: 1200px; */
+  max-width: 1200px;
+}
+
+.header {
+  background-color: #fff;
+  /* height: 150px; */
+  padding: 30px;
+  margin-top: 150px;
+}
+
+.flex {
+  display: flex;
+}
+
+.menu {
+  /* margin-top: 50px; */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.menu-link {
+  display: block;
+  text-decoration: none;
+  /* width: 100px; */
+  padding: 15px;
+  /* height: 40px; */
+  background-color: darkmagenta;
+  color: #fff;
+  text-align: center;
+  /* line-height: 40px; */
+  font-size: large;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  margin-bottom: 15px;
+}
+
+.menu-link:hover {
+  color: darkmagenta;
+  background-color: #fff;
+  border: 1px solid darkmagenta;
+}
+
+.content {
+  margin-top: 50px;
+}
+
+.item {
+  width: 263px;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.item-pic {
+  width: 100%;
+}
+
+.txt-box {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.item-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* анимацию устанавливаем на класс */
+.anim {
+  animation: vibrate-1 0.3s linear infinite both;
+}
+
+.item2 {
+  margin: 0 auto;
+  max-width: 450px;
+  border: 1px solid #000;
+  /* display: flex;
+  flex-direction: column; */
+  margin-bottom: 50px;
+}
+
+.scale {
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.puff{
+  animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+.item3 {
+  width: 275px;
+  border: 1px #000;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
